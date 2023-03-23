@@ -5,13 +5,15 @@ import VendorDatabase from './VendorDatabase';
 import About from './About';
 import Contact from './Contact';
 import Testimonials from './Testimonials';
+import Footer from './Footer';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import styles from './Home.module.css';
 
 const App = () => {
   return (
     <Router>
       <div className="App">
-        <Navbar bg="dark" variant="dark" expand="lg">
+        <Navbar className={styles.customNavbar} variant="dark" expand="lg">
           <Container>
             <Navbar.Brand as={Link} to="/">
               Vendor Connects
@@ -48,6 +50,7 @@ const App = () => {
           <Route path="/testimonials" element={<Testimonials />} />
         </Routes>
         </Container>
+        <Footer />
       </div>
     </Router>
   );
